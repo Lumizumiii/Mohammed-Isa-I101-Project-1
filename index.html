@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Two computing techniques that support a career in digital forensics.">
+	<title>Computing Techniques for Digital Forensics</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<main class="page-shell">
+		<header class="page-header">
+			<p class="eyebrow">Digital forensics · Computing techniques</p>
+			<h1>Turning digital evidence into reliable findings</h1>
+			<p class="intro">Digital forensic work depends on careful technical methods and a disciplined process. These two techniques help investigators preserve evidence, interpret it, and explain what the data can support.</p>
+		</header>
+
+		<section class="technique" aria-labelledby="acquisition-heading">
+			<h2 id="acquisition-heading">Forensic imaging and integrity verification</h2>
+			<p>Forensic imaging creates a bit-for-bit copy of a device or storage medium so an examiner can investigate the copy while preserving the original. A write blocker can help prevent changes during acquisition, and cryptographic hashes such as SHA-256 can be calculated for the source and image. Matching hashes provide evidence that the acquired copy has not changed since it was verified. NIST recommends preserving and documenting digital evidence throughout collection and examination [1].</p>
+			<p>This technique helps answer questions such as whether a drive contains deleted files, altered records, or data relevant to an incident. For example, an examiner investigating suspected data theft can work from a verified image and repeat key checks without handling the original device. Reliable acquisition supports reproducibility and courtroom or organizational review; a poor acquisition can undermine later conclusions, even when the analysis itself is sound. Tool testing and validation are therefore important parts of the process [2].</p>
+		</section>
+
+		<section class="technique" aria-labelledby="timeline-heading">
+			<h2 id="timeline-heading">File-system analysis and timeline reconstruction</h2>
+			<p>File-system analysis examines how data is organized and what traces remain on a device. An examiner can inspect directory entries, metadata, file-system journals, and recoverable deleted content. Timeline reconstruction then places relevant events in chronological order using timestamps and other artifacts, while accounting for time zones, clock drift, and the fact that timestamps do not always prove who performed an action.</p>
+			<p>This approach can help establish how a computer was used before or after an incident: for example, whether files were created, moved, or deleted near the time of a suspected intrusion. Tools such as The Sleuth Kit and Autopsy help examiners inspect file systems and organize findings [3][4]. A timeline can reveal useful leads and patterns, but it must be corroborated with other evidence and reported with its limitations so that an investigative clue is not mistaken for certainty.</p>
+		</section>
+
+		<section class="diagram-section" aria-labelledby="diagram-heading">
+			<h2 id="diagram-heading">A plan for meaningful work</h2>
+			<figure>
+				<img src="Logic%20tree.jpeg" alt="Logic tree showing a digital-forensics career supported by core knowledge, real-world practice, and industry awareness">
+				<figcaption>My preparation plan combines formal study, hands-on forensic practice, and awareness of the tools and community.</figcaption>
+			</figure>
+		</section>
+
+		<footer class="references">
+			<h2>References</h2>
+			<ol>
+				<li id="ref-1">Kent, K., Chevalier, S., Grance, T., &amp; Dang, H. (2006). <a href="https://csrc.nist.gov/pubs/sp/800/86/final" target="_blank" rel="noopener noreferrer">Guide to Integrating Forensic Techniques into Incident Response</a>. NIST Special Publication 800-86.</li>
+				<li id="ref-2">National Institute of Standards and Technology. <a href="https://www.nist.gov/itl/ssd/software-quality-group/computer-forensics-tool-testing-program-cftt" target="_blank" rel="noopener noreferrer">Computer Forensics Tool Testing Program (CFTT)</a>.</li>
+				<li id="ref-3">The Sleuth Kit. <a href="https://www.sleuthkit.org/" target="_blank" rel="noopener noreferrer">The Sleuth Kit: Open Source Digital Forensics</a>.</li>
+				<li id="ref-4">Autopsy. <a href="https://www.autopsy.com/" target="_blank" rel="noopener noreferrer">Autopsy Digital Forensics Platform</a>.</li>
+			</ol>
+		</footer>
+	</main>
+</body>
+
+</html>
